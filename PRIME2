@@ -1,0 +1,41 @@
+// made by Kartavya Bansal
+// Roll no-19/BHP/013
+//Bsc(H)Physics
+// PROGRAM TO CHECK A LIST OF PRIME NUMBER UPTO GIVEN LIMIT
+
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int prime(int);
+
+int main()
+{
+   bool Prime;
+   int p; 
+   cout<< "Enter the no. to which you have to check prime number " <<endl;
+   cin>>p;
+   for(int n = 2; n < p; n++) {
+   	
+      Prime = prime(n);
+
+      if(Prime == true)
+         cout<<n<<" is prime number "<<endl;
+   }
+   return 0;
+}
+int prime(int n) {
+   bool Prime = true;
+
+   for(int i = 2; i <= sqrt(n); i++)
+    {
+   	
+      if (n%i == 0) 
+	  {
+         Prime = false;
+         break;
+      }
+   }  
+   return Prime;
+}
